@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍳 Агрегатор рецептов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍳 Агрегатор рецептов</h1>
+            <p>Найдите и сохраните любимые рецепты</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Введите ключевое слово (супы, салаты, выпечка...)" />
+                <button id="searchBtn">🔍 Найти</button>
+            </div>
+            <div class="keywords">
+                <span>Быстрый доступ:</span>
+                <button class="keyword-btn" data-keyword="супы">🥣 Супы</button>
+                <button class="keyword-btn" data-keyword="салаты">🥗 Салаты</button>
+                <button class="keyword-btn" data-keyword="выпечка">🥐 Выпечка</button>
+                <button class="keyword-btn" data-keyword="десерты">🍰 Десерты</button>
+            </div>
+        </section>
+
+        <div id="statusMessage" class="status-message hidden"></div>
+
+        <section id="resultsSection" class="results-section hidden">
+            <h2>📋 Найдено рецептов: <span id="resultCount">0</span></h2>
+            <div id="urlList" class="url-list"></div>
+        </section>
+
+        <section id="progressSection" class="progress-section hidden">
+            <h2>📥 Загрузка рецепта</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+            </div>
+            <div class="progress-info">
+                <span id="progressPercent">0%</span>
+                <span id="progressSize">Загружено: 0 КБ</span>
+            </div>
+        </section>
+
+        <section class="saved-section">
+            <h2>💾 Сохранённые рецепты</h2>
+            <div id="savedList" class="saved-list"></div>
+        </section>
+
+        <section id="viewerSection" class="viewer-section hidden">
+            <button id="closeViewer" class="close-btn">✕</button>
+            <div id="contentViewer" class="content-viewer"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
